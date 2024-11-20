@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: kumarshubham16/devops-be:latest
+        env:
+        - name: DATABASE_URL
+          value: "postgres://user:password@db:5432/todoapp"
+        ports:
+        - containerPort: 4400
+
