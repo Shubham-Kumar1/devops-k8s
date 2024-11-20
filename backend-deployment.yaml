@@ -18,6 +18,8 @@ spec:
         env:
         - name: DATABASE_URL
           value: "postgres://user:password@db:5432/todoapp"
+        - name: JWT_SECRET
+        value: "secret-key"
         ports:
         - containerPort: 4400
 
