@@ -1,3 +1,4 @@
+#doubt in value
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -17,7 +18,6 @@ spec:
         image: kumarshubham16/devops-fe:latest
         env:
         - name: REACT_APP_HOSTNAME
-          value: "backend"  # Points to the backend service
+          value: "backend.todo.svc.cluster.local" 
         ports:
-        - containerPort: 80
-
+        - containerPort: 3000

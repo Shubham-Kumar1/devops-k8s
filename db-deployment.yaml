@@ -30,4 +30,3 @@ spec:
       volumes:
       - name: postgres-storage
         emptyDir: {}
-

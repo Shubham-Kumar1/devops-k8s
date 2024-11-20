@@ -9,4 +9,4 @@ spec:
     - protocol: TCP
       port: 4400
       targetPort: 4400
-
+  type: LoadBalancer
