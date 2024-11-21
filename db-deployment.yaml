@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: postgres-db-deployment  # Clear name for the PostgreSQL database deployment
+  name: postgres-db-deployment
 spec:
   replicas: 1
   selector:

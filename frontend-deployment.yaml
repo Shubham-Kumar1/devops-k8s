@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend-web-app-deployment
+  name: frontend-web-app-deployment 
 spec:
   replicas: 1
   selector:
@@ -17,6 +17,6 @@ spec:
         image: kumarshubham16/devops-fe:latest
         env:
         - name: REACT_APP_HOSTNAME
-          value: "backend"
+          value: "backend-api-service"
         ports:
         - containerPort: 3000
