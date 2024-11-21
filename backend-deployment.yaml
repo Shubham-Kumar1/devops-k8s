@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend
+  name: backend-api-deployment
 spec:
   replicas: 1
   selector:
@@ -13,13 +13,12 @@ spec:
         app: backend
     spec:
       containers:
-      - name: backend
+      - name: backend-container
         image: kumarshubham16/devops-be:latest
         env:
         - name: DATABASE_URL
           value: "postgres://user:password@db:5432/todoapp"
         - name: JWT_SECRET
-        value: "secret-key"
+          value: "secret-key"
         ports:
         - containerPort: 4400
-
