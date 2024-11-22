@@ -17,8 +17,21 @@ spec:
         image: kumarshubham16/devops-be:latest
         env:
         - name: DATABASE_URL
-          value: "postgres://user:password@db:5432/todoapp"
+          value: "postgres://user:password@postgres-db-service:5432/todoapp"
         - name: JWT_SECRET
           value: "secret-key"
         ports:
         - containerPort: 4400
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-api-service
+spec:
+  selector:
+    app: backend
+  ports:
+    - protocol: TCP
+      port: 4400
+      targetPort: 4400
+  type: LoadBalancer
