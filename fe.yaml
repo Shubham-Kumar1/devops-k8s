@@ -14,10 +14,10 @@ spec:
     spec:
       containers:
       - name: frontend-container
-        image: kumarshubham16/devops-fe:1.1
+        image: kumarshubham16/devops-fe:2.0
         env:
         - name: REACT_APP_BACKENDHOST
-          value: "http://backend-api-service:4400"  # Correct service name
+          value: backend-api-service:4400
         ports:
         - containerPort: 3000
 
