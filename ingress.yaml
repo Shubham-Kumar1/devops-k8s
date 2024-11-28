@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: shshinfo.xyz  # Your custom domain
+  - host: Enter-your-domain-here  # Your custom domain
     http:
       paths:
       - path: /
