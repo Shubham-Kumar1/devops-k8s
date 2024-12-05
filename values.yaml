@@ -1,0 +1,8 @@
+prometheus:
+  prometheusSpec:
+    additionalScrapeConfigs:
+      - job_name: 'backend-app'
+        static_configs:
+          - targets: ['<You-domain.com:PORT>/metrics where you have exposed']
+        metrics_path: '/'
+

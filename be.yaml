@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: backend-container
-        image: kumarshubham16/devops-be:latest
+        image: gcr.io/todo-project-440909/devops-backend:1.0.0
         env:
         - name: DATABASE_URL
           value: "postgres://user:password@postgres-db-service:5432/todoapp"
@@ -22,6 +22,8 @@ spec:
           value: "secret-key"
         ports:
         - containerPort: 4400
+      imagePullSecrets:
+        - name: gcr-secret
 ---
 apiVersion: v1
 kind: Service
