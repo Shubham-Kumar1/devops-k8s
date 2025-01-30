@@ -15,15 +15,13 @@ spec:
     spec:
       containers:
       - name: frontend-container
-        image: gcr.io/todo-project-440909/devops-frontend:1.0.0
+        image: kumarshubham16/devops-fe
         env:
         - name: REACT_APP_BACKENDHOST
           value: <Backend-LoadBalancer-Ip>
         ports:
         - containerPort: 3000
-      imagePullSecrets:
-        - name: gcr-secret
-
+        
 ---
 apiVersion: v1
 kind: Service
