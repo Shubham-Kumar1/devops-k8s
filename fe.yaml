@@ -18,7 +18,7 @@ spec:
         image: kumarshubham16/devops-fe:2.1
         env:
         - name: REACT_APP_BACKENDHOST
-          value: <Backend-LoadBalancer-Ip>
+          value: # Format: <backend-service-ip>:<backend-service-port>
         ports:
         - containerPort: 3000
         
