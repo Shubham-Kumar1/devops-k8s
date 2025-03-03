@@ -15,13 +15,18 @@ spec:
     spec:
       containers:
       - name: frontend-container
-        image: kumarshubham16/devops-fe:2.1
+        image: kumarshubham16/devops-fe:2.3
         env:
         - name: REACT_APP_BACKENDHOST
           valueFrom:
             secretKeyRef:
               name: mysecret
               key: backend_host
+        - name: REACT_APP_TLS
+          valueFrom:
+            configMapKeyRef:
+              name: config
+              key: tls
         ports:
         - containerPort: 3000
         
