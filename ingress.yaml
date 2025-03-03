@@ -10,24 +10,30 @@ metadata:
 spec:
   ingressClassName: nginx
   tls:
-  - hosts:
-    - shshinfo.xyz
-    secretName: shshinfo-tls
+    - hosts:
+      - shshinfo.xyz
+      secretName: shshinfo-tls
+    - hosts:
+      - be.shshinfo.xyz
+      secretName: shshinfo-tls2
   rules:
-  - host: shshinfo.xyz
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: frontend-web-app-service
-            port:
-              number: 3000
-      - path: /backend
-        pathType: Exact
-        backend:
-          service:
-            name: backend-api-service
-            port:
-              number: 4400
+    - host: shshinfo.xyz
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: frontend-web-app-service
+                port:
+                  number: 3000
+    - host: be.shshinfo.xyz
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: backend-api-service
+                port:
+                  number: 4400
