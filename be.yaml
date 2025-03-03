@@ -20,7 +20,10 @@ spec:
         - name: DATABASE_URL
           value: "postgres://user:password@postgres-db-service:5432/todoapp"
         - name: JWT_SECRET
-          value: "secret-key"
+          valueFrom:
+            secretKeyRef:
+              name: mysecret
+              key: jwt_secret
         ports:
         - containerPort: 4400
 ---

@@ -18,7 +18,10 @@ spec:
         image: kumarshubham16/devops-fe:2.1
         env:
         - name: REACT_APP_BACKENDHOST
-          value: # Format: <backend-service-ip>:<backend-service-port>
+          valueFrom:
+            secretKeyRef:
+              name: mysecret
+              key: backend_host
         ports:
         - containerPort: 3000
         
