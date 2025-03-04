@@ -1,8 +1,8 @@
 prometheus:
   prometheusSpec:
     additionalScrapeConfigs:
-      - job_name: 'backend-app'
+      - job_name: 'backend-api-service'
         static_configs:
-          - targets: ['<You-domain.com:PORT>/metrics where you have exposed']
+          - targets: ['be.shshinfo.xyz']
         metrics_path: '/'
 

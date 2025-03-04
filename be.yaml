@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: backend-container
-        image: kumarshubham16/devops-be:2.2
+        image: kumarshubham16/devops-be:2.3
         resources:
           requests:
             memory: "256Mi"
