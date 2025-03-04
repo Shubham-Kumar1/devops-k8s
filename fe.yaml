@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: frontend-container
-        image: kumarshubham16/devops-fe:2.3
+        image: kumarshubham16/devops-fe:2.4
         env:
         - name: REACT_APP_BACKENDHOST
           valueFrom:
