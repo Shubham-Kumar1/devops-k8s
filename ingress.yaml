@@ -11,10 +11,10 @@ spec:
   ingressClassName: nginx
   tls:
     - hosts:
-      - shshinfo.xyz
+      - <frontend-domain>
       secretName: shshinfo-tls
     - hosts:
-      - be.shshinfo.xyz
+      - <backend-domain>
       secretName: shshinfo-tls2
   rules:
     - host: shshinfo.xyz
