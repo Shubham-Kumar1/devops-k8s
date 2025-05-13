@@ -25,7 +25,10 @@ spec:
             cpu: "500m"
         env:
         - name: DATABASE_URL
-          value: "postgres://user:password@postgres-db-service:5432/todoapp"
+          valueFrom:
+            secretKeyRef:
+              name: mysecret
+              key: database_url
         - name: JWT_SECRET
           valueFrom:
             secretKeyRef:

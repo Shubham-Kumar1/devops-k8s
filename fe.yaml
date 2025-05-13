@@ -15,14 +15,14 @@ spec:
     spec:
       containers:
       - name: frontend-container
-        image: kumarshubham16/devops-fe:2.4
+        image: kumarshubham16/devops-fe:2.5
         resources:
           requests:
-            memory: "256Mi"
-            cpu: "250m"
-          limits:
             memory: "512Mi"
             cpu: "500m"
+          # limits:
+          #   memory: "1Gi"
+          #   cpu: "1Gi"
         env:
         - name: REACT_APP_BACKENDHOST
           valueFrom:

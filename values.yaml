@@ -3,6 +3,6 @@ prometheus:
     additionalScrapeConfigs:
       - job_name: 'backend-api-service'
         static_configs:
-          - targets: ['be.shshinfo.xyz']
+          - targets: ['be.shubham.it.com']
         metrics_path: '/'
 
