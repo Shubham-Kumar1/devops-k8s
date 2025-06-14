@@ -4,19 +4,19 @@ metadata:
   name: app-ingress
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-production
-    # nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
   #if tls is there
-  # tls:
-  #   - hosts:
-  #       - shubham.it.com
-  #     secretName: todo-shubham-tls
-  #   - hosts:
-  #       - be.shubham.it.com
-  #     secretName: be-shubham-tls
+  tls:
+    - hosts:
+        - shubham.it.com
+      secretName: todo-shubham-tls
+    - hosts:
+        - be.shubham.it.com
+      secretName: be-shubham-tls
   rules:
     - host: shubham.it.com
       http:
