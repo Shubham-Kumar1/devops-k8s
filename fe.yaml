@@ -16,10 +16,10 @@ spec:
       containers:
       - name: frontend-container
         image: kumarshubham16/devops-fe:2.5
-        resources:
-          requests:
-            memory: "512Mi"
-            cpu: "500m"
+        # resources:
+        #   requests:
+        #     memory: "512Mi"
+        #     cpu: "500m"
           # limits:
           #   memory: "1Gi"
           #   cpu: "1Gi"
