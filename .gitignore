@@ -2,3 +2,7 @@ _json_key.json
 script
 argocd-repo-key
 argocd-repo-key.pub
+hpa-be.yaml
+hpa-fe.yaml
+ingress.yaml
+values.yaml
