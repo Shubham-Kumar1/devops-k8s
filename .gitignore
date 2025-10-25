@@ -2,3 +2,4 @@ _json_key.json
 script
 argocd-repo-key
 argocd-repo-key.pub
+secret.yaml
