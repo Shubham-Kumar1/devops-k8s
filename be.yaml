@@ -15,13 +15,13 @@ spec:
     spec:
       containers:
       - name: backend-container
-        image: kumarshubham16/devops-be:2.4
+        image: kumarshubham16/devops-be:2.5
         resources:
           requests:
-            memory: "256Mi"
+            memory: "512Mi"
             cpu: "250m"
           limits:
-            memory: "512Mi"
+            memory: "1Gi"
             cpu: "500m"
         env:
         - name: DATABASE_URL
